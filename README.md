@@ -12,6 +12,16 @@ npx sequelize-cli model:generate --name Transaction --attributes invoice:string,
 
 5. Detail Transaction
 npx sequelize-cli model:generate --name DetailTransaction --attributes transaction:integer,book:integer,titleBook:string,authorBook:string,imageBook:text,priceBook:integer,quantity:integer
-# Untuk Menjalankan dan Menbatalkan Migration
-npx sequelize-cli db:migrate
-npx sequelize-cli db:migrate:undo
+## Untuk Menjalankan dan Menbatalkan Migration
+- npx sequelize-cli db:migrate
+- npx sequelize-cli db:migrate:undo
+
+# Membuat Seeder
+- npx sequelize-cli seed:generate --name seeder-user
+- npx sequelize-cli seed:generate --name seeder-category
+- npx sequelize-cli seed:generate --name seeder-book
+- npx sequelize-cli seed:generate --name seeder-transaction
+
+## Untuk Menjalankan Seeder
+- npx sequelize-cli db:seed:all
+- npx sequelize-cli db:seed:undo (membatalkan)
