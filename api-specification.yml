@@ -5,8 +5,13 @@ info:
 servers:
   - url: http://localhost:3000/api/v1
 paths:
-  /test:
+  /categories:
     get:
+      parameters: 
+      - in: header
+        name: token
+        schema:
+          type: string
       responses:
         '200':
           description: OK
@@ -23,7 +28,7 @@ components:
     loginMode:
       required: true
       content:
-        multipart/form-data:
+        application/json:
           schema:
             type: object
             # The properties correspond to individual form fields
@@ -32,5 +37,6 @@ components:
                 type: string
               password:
                 type: string
+          
             
           

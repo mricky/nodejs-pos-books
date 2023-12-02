@@ -1,0 +1,25 @@
+@baseUrl = http://localhost:3000
+@contentType = application/json
+### GET
+{{baseUrl}}
+
+### Create Login
+POST {{baseUrl}}/api/v1/auth/signin 
+content-type: application/json
+accept: application/json
+
+{
+    "email": "mricky.it@gmail.com",
+    "password": "rahasia"
+}
+
+### Signup
+POST {{baseUrl}}/api/v1/auth/signup 
+content-type: application/json
+accept: application/json
+
+{
+    "email": "ricky@gmail.com",
+    "password": "rahasia",
+    "confirmPassword": "rahasia"
+}
