@@ -5,7 +5,8 @@ module.exports = {
         try
         {
             const categories = await Category.findAll({
-                where: {user: req.user.id}
+                where: {user: req.user.id},
+                attributes: ['id','name']
             });
 
             res.status(200).json({
@@ -17,7 +18,6 @@ module.exports = {
             next();
         }
     },
-
     createCategory : async (req,res,next) => {
         try{
             const {name} = req.body;
@@ -58,6 +58,7 @@ module.exports = {
     deleteCategory : async (req,res,next) => {
 
         const {id} = req.params;
+
         Category.findOne({
             where: {id: id, user: req.user.id}
         })

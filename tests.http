@@ -1,5 +1,6 @@
 @baseUrl = http://localhost:3000
 @contentType = application/json
+@token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTMzMDExfQ.cWwPJaKOI3viADqqLsL2eJFvCn0c8a-lxDNef7Pp984"
 ### GET
 {{baseUrl}}
 
@@ -29,13 +30,13 @@ accept: application/json
 GET {{baseUrl}}/api/v1/categories
 content-type: application/json
 accept: application/json
-token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTI3NTExfQ.4lkbIeI331X4aT1D6W-t0QL4E8EXcp21QNaFMeNaSuA"
+token: {{token}}
 
 #### Create Category
 POST {{baseUrl}}/api/v1/categories
 content-type: application/json
 accept: application/json
-token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTI4MzkyfQ.WYPDagQ_f7RqZTNGSRORSNTluqr-4n8BtpK_NfOAcLE"
+token: {{token}}
 
 {
     "name": "Algoritmas"
@@ -45,7 +46,7 @@ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUml
 PUT {{baseUrl}}/api/v1/categories/11
 content-type: application/json
 accept: application/json
-token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTI4MzkyfQ.WYPDagQ_f7RqZTNGSRORSNTluqr-4n8BtpK_NfOAcLE"
+token: {{token}}
 
 {
     "name": "Algoritmas"
@@ -55,5 +56,12 @@ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUml
 DELETE {{baseUrl}}/api/v1/categories/11
 content-type: application/json
 accept: application/json
-token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTI4MzkyfQ.WYPDagQ_f7RqZTNGSRORSNTluqr-4n8BtpK_NfOAcLE"
+token: {{token}}
 
+
+### Books
+#### Get All Books
+GET {{baseUrl}}/api/v1/books
+content-type: application/json
+accept: application/json
+token: {{token}}
