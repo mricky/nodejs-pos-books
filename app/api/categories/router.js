@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const {auth} = require('../../middlewares/auth')
+const {auth} = require('../../middlewares/auth');
+const categories = require('./controller');
 
-router.get('/categories',auth, function(req, res) {
-  res.status(200).json({message: "Router Categories"});
-});
-
+router.get('/categories',auth, categories.getAllCategories);
+router.post('/categories',auth, categories.createCategory);
+router.put('/categories/:id',auth, categories.updateCategory);
+router.delete('/categories/:id',auth, categories.deleteCategory);
 module.exports = router;

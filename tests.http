@@ -3,7 +3,7 @@
 ### GET
 {{baseUrl}}
 
-### Create Login
+### Login
 POST {{baseUrl}}/api/v1/auth/signin 
 content-type: application/json
 accept: application/json
@@ -23,3 +23,37 @@ accept: application/json
     "password": "rahasia",
     "confirmPassword": "rahasia"
 }
+
+### Categories
+#### Get All Categories
+GET {{baseUrl}}/api/v1/categories
+content-type: application/json
+accept: application/json
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTI3NTExfQ.4lkbIeI331X4aT1D6W-t0QL4E8EXcp21QNaFMeNaSuA"
+
+#### Create Category
+POST {{baseUrl}}/api/v1/categories
+content-type: application/json
+accept: application/json
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTI4MzkyfQ.WYPDagQ_f7RqZTNGSRORSNTluqr-4n8BtpK_NfOAcLE"
+
+{
+    "name": "Algoritmas"
+}
+
+#### Update Category
+PUT {{baseUrl}}/api/v1/categories/11
+content-type: application/json
+accept: application/json
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTI4MzkyfQ.WYPDagQ_f7RqZTNGSRORSNTluqr-4n8BtpK_NfOAcLE"
+
+{
+    "name": "Algoritmas"
+}
+
+#### Delete Category
+DELETE {{baseUrl}}/api/v1/categories/11
+content-type: application/json
+accept: application/json
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo2LCJuYW1lIjoiUmlja3kiLCJlbWFpbCI6Im1yaWNreS5pdEBnbWFpbC5jb20ifSwiaWF0IjoxNzAxNTI4MzkyfQ.WYPDagQ_f7RqZTNGSRORSNTluqr-4n8BtpK_NfOAcLE"
+
