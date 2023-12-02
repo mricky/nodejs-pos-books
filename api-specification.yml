@@ -10,9 +10,27 @@ paths:
       responses:
         '200':
           description: OK
-  /auth:
-    get:
+  /auth/signin:
+    post:
+      requestBody:
+         $ref: '#/components/requestBodies/loginMode'
       responses:
         '200':
           description: OK
+
+components:
+  requestBodies:
+    loginMode:
+      required: true
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            # The properties correspond to individual form fields
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+            
           
